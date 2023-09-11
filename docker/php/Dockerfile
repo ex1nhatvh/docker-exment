@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y git wget gnupg vim unzip libxml2-dev li
   && docker-php-ext-install mbstring dom gd zip pdo_mysql ldap\
   && apt-get clean
 
+# install pre sql server driver
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
   && curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | tee /etc/apt/sources.list.d/msprod.list \
   && apt-get update \
