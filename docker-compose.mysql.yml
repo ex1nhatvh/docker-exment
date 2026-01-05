@@ -12,6 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${EXMENT_DOCKER_MYSQL_ROOT_PASSWORD-secret}
       MYSQL_USER: ${EXMENT_DOCKER_MYSQL_USER-exment_user}
       MYSQL_PASSWORD: ${EXMENT_DOCKER_MYSQL_PASSWORD-secret}
+      MYSQL_SSL_MODE: DISABLED
     networks:
       - exment-network
 
